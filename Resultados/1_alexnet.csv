@@ -1,0 +1,4 @@
+batch_size;lr;epoch;accuracy(%);tempo_decorrido(plat. Kaggle)(minutos)
+32;0.001;5;46.8;41
+64;0.001;5;;
+128;0.001;5;;
