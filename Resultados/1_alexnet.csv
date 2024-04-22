@@ -1,39 +1,14 @@
-pre_treino;batch_size;lr;epoch;accuracy(%);tempo_decorrido(plat. Kaggle)(minutos);notas
+pre-treino;batch_size;lr;epoch;accuracy(%);tempo_decorrido(plat. Kaggle)(minutos);device;notas
 
-(com e sem pre-treino)
+(epoch = 15)
 
-não;32;0.001;5;46.8;41;abaixo de 50%
-sim;32;0.001;5;60.0;40;tudo na class 0 - nao aprendeu - muito lento a convergir (loss quase nao desce)
+sim;32;0.001;15;61.0;82;cpu;Podia descer mais
+sim;32;0.002;15;67.5;87;cpu;Podia descer mais
+sim;32;0.005;15;67.7;7;cuda;Podia descer apenas mais um pouco
 
-(variar lr e epochs)
-
-sim;32;0.01;5;59.5;34;começa a ter capacidade de aprender
-sim;32;0.1;5;40.0;36;tudo na class 1 - nao aprendeu - valor demasiado elevado - loss desde muito rapido
-sim;32;0.001;10;61.0;67;loss desce muito devagar
-sim;32;0.01;10;60.2;72;loss desce muito rapido
-
-(usar learning rate de 0.005 e 0.002 com 10 epochs - uma vez o modelo com 0.001 lr e 10 epochs teve o melhor desempenho mas desceu muito devagar)
-
-sim;32;0.005;10;61.8;69;loss desce um pouco rapido
-sim;32;0.002;10;62.2;68;loss termina em loss 0.18
-
-(variar batch_size com os 2 melhores)
-
-sim;64;0.002;10;59.5;65;loss desceu bastante devagar (bom para epoch = 15)
-sim;128;0.002;10;45.5;64;loss quase nem desceu
-sim;64;0.001;10;47.2;77;loss quase nem desceu
-
-(usar epoch = 15 com os 4 melhores com learning rate baixo)
-
-sim;32;0.001;15;66.5;109;podia descer um pouco mais
-sim;64;0.001;15;58.5;106;desdeu muito devagar
-sim;32;0.002;15;67.7;107;desceu muito rapido
-sim;64;0.002;15;65.3;104;podia descer um pouco mais
-
-(meter learning curve e testar que os resultados sao iguais)
-
-(usar epoch = 30 com os dois mais promissores - batch size de 128)
-
-...
+sim;32;0.001;30;;;cuda;
+sim;64;0.001;30;;;cuda;
+sim;128;0.001;30;;;cuda;
 
 (export do modelo para pasta Modelos/ModelosExported)
+(backup do melhor)
