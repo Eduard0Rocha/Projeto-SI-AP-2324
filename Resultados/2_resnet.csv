@@ -1,34 +1,28 @@
-pre-treino;batch_size;lr;epoch;accuracy(%);tempo_decorrido(plat. Kaggle)(minutos);device;notas
+batch_size;lr;epoch;tempo_decorrido(plat. Kaggle)(minutos);device;accuracy(%)
 
-(epoch = 15)
+32;0.001;15;12;cuda;67.2
+64;0.001;15;10;cuda;65.8
 
-sim;32;0.001;15;67.2;12;cuda;good fit
-não;32;0.001;15;;;cuda;
+32;0.002;15;11;cuda;62.2         
+64;0.002;15;10;cuda;73.2
 
-64;0.001;15;;;
-128;0.001;15;;;
+32;0.005;15;11;cuda;84.7      
+64;0.005;15;10;cuda;67.3                  
 
-32;0.002;15;;;         
-64;0.002;15;;;
-128;0.002;15;;;
+32;0.01;15;10;cuda;72.8      
+64;0.01;15;10;cuda;62.3
 
-32;0.005;15;;;         
-64;0.005;15;;;
-128;0.005;15;;;
+32;0.001;30;23;cuda;63.5
+64;0.001;30;20;cuda;67.3
 
-(epoch = 30)
+32;0.002;30;23;cuda;72.5
+64;0.002;30;20;cuda;68.7
 
-32;0.001;30;;;
-64;0.001;30;;;
-128;0.001;30;;;
+32;0.005;30;22;cuda;67.8
+64;0.005;30;20;cuda;68.3
 
-32;0.002;30;;;
-64;0.002;30;;;
-128;0.002;30;;;
+(nao foi usado batch_size = 128 por causa da limitação de memória do gpu do kaggle)
 
-32;0.005;30;;;         
-64;0.005;30;;;
-128;0.005;30;;;
 
 (export do modelo para pasta Modelos/ModelosExported)
 (backup do melhor)

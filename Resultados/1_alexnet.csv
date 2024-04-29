@@ -1,14 +1,24 @@
-pre-treino;batch_size;lr;epoch;accuracy(%);tempo_decorrido(plat. Kaggle)(minutos);device;notas
-
-(epoch = 15)
-
-sim;32;0.001;15;61.0;82;cpu;Podia descer mais
-sim;32;0.002;15;67.5;87;cpu;Podia descer mais
-sim;32;0.005;15;67.7;7;cuda;Podia descer apenas mais um pouco
-
-sim;32;0.001;30;;;cuda;
-sim;64;0.001;30;;;cuda;
-sim;128;0.001;30;;;cuda;
-
-(export do modelo para pasta Modelos/ModelosExported)
-(backup do melhor)
+batch_size;lr;epoch;tempo_decorrido(plat. Kaggle)(minutos);device;accuracy(%)
+32;0.001;15;82;cpu;61.0
+32;0.002;15;87;cpu;67.5
+32;0.005;15;7;cuda;67.7  
+32;0.01;15;6;cuda;59.0
+32;0.0002;30;12;cuda;45.2
+32;0.0005;30;12;cuda;67.5
+32;0.001;30;12;cuda;65.8
+32;0.002;30;12;cuda;62.0
+64;0.002;15;6;cuda;62.7
+64;0.005;15;6;cuda;65.2
+64;0.01;15;7;cuda;42.7
+64;0.0002;30;14;cuda;60.0
+64;0.0005;30;11;cuda;54.8
+64;0.001;30;12;cuda;66.5
+64;0.002;30;12;cuda;67.7
+64;0.005;30;12;cuda;60.0
+128;0.002;15;5;cuda;53.7
+128;0.005;15;5;cuda;67.2
+128;0.01;15;5;cuda;53.8
+128;0.001;30;12;cuda;55.5
+128;0.002;30;11;cuda;67.5
+128;0.005;30;12;cuda;62.5
+128;0.01;30;12;cuda;61.5
