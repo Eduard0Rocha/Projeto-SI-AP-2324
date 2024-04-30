@@ -1,28 +1,15 @@
 batch_size;lr;epoch;tempo_decorrido(plat. Kaggle)(minutos);device;accuracy(%)
-
 32;0.001;15;12;cuda;67.2
 64;0.001;15;10;cuda;65.8
-
 32;0.002;15;11;cuda;62.2         
 64;0.002;15;10;cuda;73.2
-
 32;0.005;15;11;cuda;84.7      
 64;0.005;15;10;cuda;67.3                  
-
 32;0.01;15;10;cuda;72.8      
 64;0.01;15;10;cuda;62.3
-
 32;0.001;30;23;cuda;63.5
 64;0.001;30;20;cuda;67.3
-
 32;0.002;30;23;cuda;72.5
 64;0.002;30;20;cuda;68.7
-
 32;0.005;30;22;cuda;67.8
 64;0.005;30;20;cuda;68.3
-
-(nao foi usado batch_size = 128 por causa da limitação de memória do gpu do kaggle)
-
-
-(export do modelo para pasta Modelos/ModelosExported)
-(backup do melhor)
