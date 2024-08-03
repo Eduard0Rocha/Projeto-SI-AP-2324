@@ -16,4 +16,4 @@
 
 
 ### Link para a Google Drive com os modelos exportados:
-https://drive.google.com/drive/folders/1PGeovK6DXXeLiXHBeVpPh-ksAxoZYFZS?hl=pt-br
+(Os ficheiros do GoogleDrive foram apagados no final do semestre)
